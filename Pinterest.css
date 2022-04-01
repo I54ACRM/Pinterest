@@ -1,0 +1,243 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+#navbar-pinterest{
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    z-index: 1;
+}
+.navbar-left{
+    display: flex;
+    justify-content: flex-start;
+}
+#pinterest-icon{
+    height: 35px;
+    width: 35px;
+    margin-top: 18px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.black{
+    background-color: black;
+    font-size: 15.5px;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-top: 12px;
+    height: 45px;
+    width: 70px;
+}
+.black a{
+    color: white;
+    text-decoration: inherit;
+    font-weight:bold;
+}
+.hoy{
+    background-color: transparent;
+    font-size: 15.5px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 12px;
+    height: 45px;
+    width: 60px;
+}
+.hoy:hover{
+    border: 1px solid rgba(211, 211, 211, 0.514);
+    background-color: rgba(211, 211, 211, 0.397);
+}
+.hoy a{
+    color: black;
+    text-decoration: inherit;
+    font-weight:bold;
+}
+.navbar-central{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(211, 211, 211, 0.521);
+    background-color: rgba(211, 211, 211, 0.295);
+    height: 22px;
+    padding: 10px 10px;
+    border-radius: 100px;
+    width: 1290px;
+    margin: 10px;
+    margin-right: 18px;
+    margin-top: 14px;
+}
+#search{
+    height: 25px;
+    width: 25px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+.finder{
+    width: 1250px;
+    height: 35px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.navbar-right{
+    display: flex;
+    justify-content: flex-end;
+}
+#notifications{
+    height: 30px;
+    width: 35px;
+    margin-top: 18px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+#message{
+    height: 30px;
+    width: 35px;
+    margin-top: 18px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+#profile-img{
+    height: 30px;
+    width: 35px;
+    margin-top: 18px;
+    margin-left: 5px;
+    margin-right: 35px;
+}
+#content{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 15px;
+    margin-top: 20px;
+
+    grid-template-rows: masonry;
+    /* Si se cuenta con firefox se puede ver el layout masonry igual al de pinterest */
+}
+.card-image{
+    position: relative;
+}
+.card-image:hover{
+    filter: brightness(80%)
+}
+.card-image img{
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    display: flex;
+}
+.button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    margin: 5px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 15.5px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    height: 45px;
+    width: 85px;
+    display: none;
+}
+.button:hover{
+    background-color: rgba(180, 9, 9, 0.87);
+}
+.button a{
+    color: white;
+    text-decoration: inherit;
+    font-weight:bold;
+}
+.button2{
+    position: absolute;
+    right: 70px;
+    bottom: 10px;
+    display: none;
+    height: 35px;
+    width: 35px;
+    border: 1px transparent;
+    border-radius: 120%;
+}
+.button2:hover{
+    background-color: lightgray;
+}
+.button3{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    display: none;
+    height: 35px;
+    width: 35px;
+    border: 1px transparent;
+    border-radius: 120%;
+}
+.button3:hover{
+    background-color: lightgray;
+}
+.card-image:hover .button{
+    display: block;
+}
+.card-image:hover .button2{
+    display: block;
+}
+.card-image:hover .button3{
+    display: block;
+}
+@media screen and (max-width: 768px){
+    #navbar-pinterest{
+        width: 766px;
+    }
+    .finder{
+        width: 300px;
+    }
+    #profile-img{
+        margin-right: 25px;
+    }
+    #content{
+        grid-template-columns: repeat(auto-fill, 200px);
+    }
+}
+@media screen and (max-width: 480px){
+    #navbar-pinterest{
+        width: 478px;
+    }
+    .finder{
+        width: 100px;
+    }
+    #pinterest-icon{
+        height: 25px;
+        width: 25px;
+    }
+    .black{
+        font-size: 13.5px;
+        height: 35px;
+        width: 60px;
+    }
+    .hoy{
+        font-size: 13.5px;
+        height: 35px;
+        width: 50px;
+    }
+    #notifications{
+        height: 25px;
+        width: 30px;
+        margin-left: 3px;
+        margin-right: 5px;
+    }
+    #message{
+        height: 25px;
+        width: 30px;
+        margin-left: 3px;
+        margin-right: 5px;
+    }
+    #profile-img{
+        height: 25px;
+        width: 30px;
+        margin-left: 3px;
+        margin-right: 18px;
+    }
+}
